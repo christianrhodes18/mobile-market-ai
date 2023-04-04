@@ -25,3 +25,5 @@
 
 # Ignore sensitive information
 .secret
+
+.DS_Store

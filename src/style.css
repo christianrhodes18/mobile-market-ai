@@ -1,0 +1,173 @@
+html {
+  font-family: "Sen", sans-serif;
+}
+
+body {
+  height: 100vh;
+  min-height: 800px;
+  background: linear-gradient(180deg, #FD7762 21.75%, #994A44 94.86%);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  color: #000000;
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+
+/* place right buttom on the right side */
+.title-section .justify-right {
+  margin-left: auto;
+}
+
+.title-section .justify-right img {
+  transform: rotate(180deg);
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+
+.title-section h1 {
+  padding-left: 10px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.title-section img {
+  padding-top: 4px;
+}
+
+.title-section button {
+  width: 3rem;
+  height: 30px;
+  border-radius: 7px;
+  border-color: transparent;
+}
+
+.title-section button:nth-child(1) {
+  background: linear-gradient(244.85deg, #073341 19.47%, #377F7B 99.92%);
+}
+
+.title-section button:nth-child(3) {
+  background: linear-gradient(244.85deg, #FF9C38 19.47%, #FE7C04 99.92%);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 1rem;
+  padding: 0 1rem;
+  justify-content: space-evenly;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-line {
+  margin: 0 0.5rem;
+  width: 15px;
+  height: 5px;
+}
+.color-line.yellow {
+  background: #F2D394;
+}
+.color-line.rose {
+  background: #C74C54;
+}
+.color-line.coral {
+  background: #194347;
+}
+
+.grid-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding: 0 1rem;
+  margin: 0 0 0 2em;
+  color: #ffffff;
+  font-size: 0.5rem;
+}
+
+.grid-item {
+  border-radius: 12px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.grid-item.orange {
+  background: linear-gradient(180deg, #FBB21A 0%, #EA8105 100%);
+}
+.grid-item.image-item {
+  background-image: url("/src/assets/space_painting.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.grid-item.lightblue-1 {
+  background: linear-gradient(180deg, #0C839C 0%, #10E9DF 100%);
+}
+.grid-item.rose {
+  background: linear-gradient(180deg, #A44244 0%, #F15767 100%);
+}
+.grid-item.peach {
+  background: linear-gradient(180deg, #CE6D61 0%, #FBB087 100%);
+}
+.grid-item.lightblue-2 {
+  background: linear-gradient(180deg, #08B7B2 0%, #14DFCA 100%);
+}
+.grid-item.peach-2 {
+  background: linear-gradient(180deg, #E25F5F 0%, #FBB487 100%);
+}
+.grid-item.orange-2 {
+  background: linear-gradient(180deg, #C46805 0%, #F19308 100%);
+}
+.grid-item::before {
+  border-radius: 20px;
+  background: #A0A0A7;
+  transform: translate(-20px, 20px);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  filter: blur(20px);
+}
+
+.grid-item hr {
+  width: 100%;
+  border-top: 0.5px solid #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
