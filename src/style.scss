@@ -4,10 +4,13 @@ html {
 
 body {
     height: 100vh;
-    min-height: 800px;
-    background: linear-gradient(180deg, #FD7762 21.75%, #994A44 94.86%);
+    min-height: 1000px;
+    //background: linear-gradient(180deg, #FD7762 21.75%, #994A44 94.86%);
     margin: auto;
-    //overflow: hidden;
+}
+
+.mobile-outline{
+    background: linear-gradient(#ffffff, #5296A7);
 }
 
 h1 {
@@ -29,12 +32,17 @@ p {
 }
 
 .title-section {
+    position: sticky;
+    position: -webkit-sticky; /* for Safari */
+    top: 0;
+    z-index: 10;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     color: #000000;
-    margin: 4rem 1.5rem 0 1.5rem;
+    margin: 3rem 1.5rem 0 1.5rem;
 }
 /* place right buttom on the right side */
 .title-section .justify-right {
@@ -49,6 +57,7 @@ p {
 .title-section h1 {
     padding-left: 10px;
     text-shadow: -2px 4px 6px rgba(0, 0, 0, 0.25);
+    //color: white;
 }
 .title-section img {
     padding-top: 4px;
@@ -94,6 +103,7 @@ p {
     flex-direction: row;
     grid-gap: 1rem;
     padding: 0 1rem;
+    margin-top: -1rem;
     justify-content: space-evenly;
 }
 
@@ -102,6 +112,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    //color: white;
 }
 .color-line {
     margin: 0 0.5rem;
@@ -119,14 +130,16 @@ p {
     }
 }
 
-
+section {
+    margin-bottom: 5rem;
+}
 .grid-container {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
-    padding: 0 1rem;
-    margin: 0 0 0 2em;
+    padding: 0 1rem 8rem 1rem;
+    //margin: 0 0 0 2em;
     color: #ffffff;
     font-size: 0.5rem;
     justify-items: center;
@@ -142,6 +155,7 @@ p {
     justify-content: space-between;
     width: 10rem;
     max-width: 15rem;
+    box-shadow: -1em 10px 10px rgba(0, 0, 0, 0.20);
 
     &.orange {
         background: linear-gradient(180deg, #FBB21A 0%, #EA8105 100%);
@@ -171,11 +185,13 @@ p {
         background: linear-gradient(180deg, #C46805 0%, #F19308 100%);
     }
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        transition: transform 0.2s ease-in-out;
-    }
+    // changed these psedo elems because they conflicted with gsap anims
+
+    // &:hover {
+    //     cursor: pointer;
+    //     transform: scale(1.05);
+    //     transition: transform 0.2s ease-in-out;
+    // }
 
     // &::before {
     //     border-radius: 20px;
@@ -220,20 +236,82 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding: 1rem;
+    //padding: 1rem;
     background: #ffffff;
     color: #ffffff;
     font-size: 0.5rem;
     font-weight: 300;
     text-align: center;
     margin-top: 2rem;
-    background: linear-gradient(90deg, #D85001 26.5%, #FD6800 100%);
+    //background: linear-gradient(90deg, #D85001 26.5%, #FD6800 100%);
+    background: linear-gradient(90deg, #FD7762 21.75%, #b3625d 94.86%);
 
     // position: absolute;
-    // border-radius: 43px;
+    //border-radius: 43px;
+}
+
+footer img {
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.25);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.info-content {
+    display: none;
+}
+
+//media query for desktop
+@media (min-width: 485px) {
+    .parent-container {
+        display: flex;
+        flex-direction: row;
+        // align-items: flex-start;
+        justify-content: space-around;
+    }
+    .mobile-outline {
+        border: 3px solid black;
+        margin: 0 1rem;
+        max-width: 405px;
+    }
+    .grid-container {
+        padding-bottom: 2rem;
+    }
+    footer {
+        width: 24rem;
+    }
+    .info-content {
+        display: block;
+        position: sticky;
+        position: -webkit-sticky; /* for Safari */
+        top: 4rem;
+        align-self: flex-start;
+        overflow-x: hidden;
+        max-width: 35rem;
+    }
+    .info-footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .info-footer {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1156px) {
+    .info-footer {
+        width: auto;
+        text-align: center;
+    }
 }
