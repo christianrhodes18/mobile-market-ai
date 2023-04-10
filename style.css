@@ -147,7 +147,7 @@ section {
   background: linear-gradient(180deg, #FBB21A 0%, #EA8105 100%);
 }
 .grid-item.image-item {
-  background-image: url("/assets/space_painting.png");
+  background-image: url("./assets/space_painting.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
